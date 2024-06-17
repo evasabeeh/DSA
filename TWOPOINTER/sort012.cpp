@@ -21,3 +21,31 @@ int main(){
 // [low, mid-1] have 1's
 // [mid, high] is unsorted part
 // [high+1, n-1] have 2's
+
+
+
+
+
+
+
+
+
+//sort 0 and 1
+void sortZeroesAndOne(int input[], int size)
+{
+    int i = 0, j = size - 1;
+    while (i < j)
+    {
+        while (input[i] == 0)
+            i++;
+        while (input[j] == 1)
+            j--;
+
+        if (i < j)
+        {
+            swap(input[i], input[j]);
+            i++;
+            j--;
+        }
+    }
+}

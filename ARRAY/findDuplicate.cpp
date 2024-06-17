@@ -8,6 +8,6 @@ int main()
     for(int i=0;i<arr.size()-1;i++){
         ans = ans^arr[i]^(i+1);
     }
-    ans = ans^arr[arr.size()-1];
+    ans = ans^arr[arr.size()-1];                 // duplicate element will be left in ans
     cout<<ans;
 }
