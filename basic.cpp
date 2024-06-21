@@ -91,7 +91,8 @@ auto a=8;     //auto assigns datatype to var acc to data
 
 
 
-
+// binary search
+binary_search(v.begin(), v.end(), x)
 
 
 //count of digits

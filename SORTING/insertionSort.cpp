@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std;              //Insertion method - SC(1)
+using namespace std;              //Insertion method - SC(1)           stable
 
 int main(){
     int arr[]={6, 3, 12, 1, 25, 2, 9};

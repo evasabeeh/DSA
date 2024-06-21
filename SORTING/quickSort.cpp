@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std;                           //Partition method & unstable
+using namespace std;                           //Partition method            unstable 
 
 int partition(vector<int>&arr, int low, int high)
 {

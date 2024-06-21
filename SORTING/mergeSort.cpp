@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-using namespace std;              //Divide & conquer method - SC(n)
+using namespace std;              //Divide & conquer method - SC(n)           stable
 
 void merge(int *arr, int start, int mid, int end){
     int m[end-start+1];

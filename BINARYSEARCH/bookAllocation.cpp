@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;                      
-
+                                    //allocate books to k students such that min books that can be distributed is maximum
 bool isPossible(vector<int> arr, int n, int m, int mid){
     int studentCount = 1;
     int pageSum = 0;
@@ -57,3 +57,4 @@ int main(){
 }
 
 // https://www.naukri.com/code360/problems/allocate-books_1090540
+// https://leetcode.com/problems/split-array-largest-sum/description/
