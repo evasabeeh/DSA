@@ -15,7 +15,7 @@ int main(){
 
     for(int i=2;i<=sqrt(n);i++){
         if(prime[i]){
-            for(int j=i*i;j<n;j+=i)      //update multiples of prime as non-prime
+            for(int j=2*i;j<n;j+=i)      //update multiples of prime as non-prime
             prime[j]=false;
         }
     }

@@ -20,3 +20,5 @@ int main(){
 }
 
    
+
+// swap i,j with j,i then reverse rows

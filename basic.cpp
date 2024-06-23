@@ -24,7 +24,11 @@ s.size();
 for(auto it=s.first; it!=s.end(); it++)
 cout<<*it;        //print element
 
+
 //multiset case store duplicate elements: sorted and not-unique
+minn = *v.begin(), maxx = *v.rbegin();      
+v.erase(v.find(x))          // to find x and delete x
+v.insert(x)
 
 
 //vector
