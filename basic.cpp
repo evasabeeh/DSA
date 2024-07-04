@@ -127,3 +127,11 @@ bool f=includes(b.begin(), b.end(), a.begin(), a.end());    //if A is a subset o
 
 //number
 ans * 10 + digit
+
+
+
+
+// max, min for multiple values
+max({
+  x, y, z, ...
+})
