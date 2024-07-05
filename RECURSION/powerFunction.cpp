@@ -5,6 +5,9 @@ int power(int base, int exp){
     if(exp==0)
     return 1;
 
+    if(exp==1)
+    return base;
+
     int temp=power(base, exp/2);
     if(exp%2==0)
     return temp*temp;
@@ -12,8 +15,6 @@ int power(int base, int exp){
     return base*temp*temp;
 }
 int main(){
-    cout<<"21BCS8745 EVA SABEEH\n";
-
     int base, exp;
     cout<<"Enter base: ";
     cin>>base;
