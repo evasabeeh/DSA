@@ -1,25 +1,29 @@
 #include<bits/stdc++.h>
-using namespace std;          
+using namespace std;                    // 2^n subsets including empty
 
-void calc(char *set, int n, vector<char>&result){
-    if(n==0){
-        for(char i:result)
-        cout<<i;
-        cout<<endl;
+void solve(vector<char> &set, vector<vector<char>> &ans, vector<char> temp, int idx){
+    if(idx >= set.size()){
+        for(char i: temp)
+        cout<<i<<" ";
+        cout << endl;
+
+        ans.push_back(temp);
         return;
     }
-    result.push_back(set[n-1]);
-    calc(set, n-1, result);
-    result.pop_back();
-    calc(set, n-1, result);
-}
-void powerSet(char* set, int n){
-    vector<char> result;        //for temporary storage of subsets
-    calc(set, n, result);
+
+    // exclude
+    solve(set, ans, temp, idx + 1);
+
+    //include
+    temp.push_back(set[idx]);
+    solve(set, ans, temp, idx + 1);
 }
 int main(){
-    char set[]={'A', 'B', 'C', 'D'};
-    powerSet(set, 4);
+    vector<char> set={'A', 'B', 'C', 'D'};
+    vector<char> temp;
+    vector<vector<char>> ans;
+
+    solve(set, ans, temp, 0);
     
     return 0;
 }                                     //O(2^n)

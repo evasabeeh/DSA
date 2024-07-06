@@ -1,19 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;    
-void printSub(int i, string str, vector<char> &ans){
-    if(i>=str.size()){
-        for(char i: ans)
-        cout<<i;
-        cout<<endl;
+
+void printSub(int i, string str, string &ans){
+    if(i>=str.size() && ans.size()>0){
+        cout<<ans<<endl;
         return;
     }
+
+    // include
     ans.push_back(str[i]);
-    printSub(i+1, str, ans);   //take
+    printSub(i+1, str, ans);
+
+    //exclude
     ans.pop_back();
-    printSub(i+1, str, ans);   //not take
+    printSub(i+1, str, ans);
 }
 int main(){
-    string str="abcd";
-    vector<char> ans;
+    string str="abc", ans="";
     printSub(0, str, ans);
 }
