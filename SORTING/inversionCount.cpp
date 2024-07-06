@@ -17,7 +17,7 @@ int merge(int *arr, int start, int mid, int end)
         else{
             m[x++] = arr[i2++];
 
-            count += (mid - i1 + 1);                 // arr[i] > arr[j]
+            count += (mid - i1 + 1);                 // arr[i] > arr[j]     part of array in left is already sorted therefore counted
         }
     }
     while (i1 <= mid)
@@ -61,3 +61,5 @@ int main()
 
     return 0;
 }
+
+// https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/
