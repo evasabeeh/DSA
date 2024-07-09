@@ -128,10 +128,8 @@ bool f=includes(b.begin(), b.end(), a.begin(), a.end());    //if A is a subset o
 //number
 ans * 10 + digit
 
-
-
-
 // max, min for multiple values
-max({
-  x, y, z, ...
-})
+max({x, y, z, ...})
+
+// iota to assign successive values
+iota(vec.begin(), vec.end(), 4);         // =>   4, 5, 6, 7, 8... size of vector

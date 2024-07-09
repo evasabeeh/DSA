@@ -112,3 +112,20 @@ int main(){
     printList();
     return 0;
 }
+
+
+
+
+
+
+/*     Recusive reverse
+void reverse(Node* &head, Node* curr, Node* prev){
+    if(curr == NULL){
+        head = prev;
+        return;
+    }
+
+    reverse( head, curr->next, curr);
+    curr -> next = prev;
+}
+*/
