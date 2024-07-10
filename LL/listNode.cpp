@@ -79,16 +79,37 @@ struct node* reverseList(){
     head=prev;
     return head;
 }
+void removeLoop(node* joinNode){              // next ptr of last node of cycle = null
+    node* temp=joinNode;
+    while(temp->next!=joinNode){
+        temp=temp->next;
+    }
+    temp->next=nullptr;
+}
 bool hasCycle() {                //check if LL has loop, if it will have somewhere ptr1 and ptr2 will coincide
-    node* ptr1=head;             //slow ptr
-    node* ptr2=head;             //fast ptr
-    while(ptr2!=NULL&&ptr2->next!=NULL){
-        ptr1=ptr1->next;
-        ptr2=ptr2->next->next;                   //Tortoise and hare algo
-        if(ptr1==ptr2)
-        return true;
+    node* slow=head;             //slow ptr
+    node* fast=head;             //fast ptr
+    while(fast!=NULL&&fast->next!=NULL){
+        slow=slow->next;
+        fast=fast->next->next;                   //Tortoise and hare algo
+        if(slow==fast){
+
+            // point of intersection
+            slow=head;
+
+            while(slow!=fast){
+                slow=slow->next;
+                fast=fast->next;
+            }
+            cout<<slow->data<<endl;               // intersecting node
+
+            removeLoop(slow);                 // remove loop: sending intersecting node
+
+            return true;
+        }
     }
     return false;
+    // with every iteration the distance between fast and slow ptr decreases by 1
 }
 void printList(){
     struct node* temp=head;
