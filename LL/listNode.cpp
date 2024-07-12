@@ -76,8 +76,7 @@ struct node* reverseList(){
         prev=curr;
         curr=forw;
     }
-    head=prev;
-    return head;
+    return prev;
 }
 void removeLoop(node* joinNode){              // next ptr of last node of cycle = null
     node* temp=joinNode;
