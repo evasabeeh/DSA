@@ -40,7 +40,7 @@ public:
             if (right[i] == -1)
                 breadth = (n - 1) - left[i];
             else
-                breadth = right[i] - left[i] - 1;
+                breadth = right[i] - left[i] - 1;          // next - prev - 1
             mx = max(mx, breadth * h[i]);
         }
         return mx;

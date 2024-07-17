@@ -118,6 +118,14 @@ sort(nums.begin(), nums.end(), [](const auto &a, const auto &b){
   return a.size()<b.size();
 });
 
+
+// comapre function : sort id vector based on position vector
+auto compare = [&](int id1, int id2){
+  return positions[id1] <= positions[id2];
+};
+sort(id.begin(), id.end(), compare);
+
+
 //if vector is a subset of another vector
 bool f=includes(b.begin(), b.end(), a.begin(), a.end());    //if A is a subset of B
 
