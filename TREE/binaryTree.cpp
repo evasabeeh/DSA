@@ -34,14 +34,14 @@ void inOrder(Node* root){
    }
 }
 
-int maxDepth(TreeNode* root) {        //height of tree
+int maxDepth(TreeNode* root) {        //height of tree          TC = O(n), SC=O(h)
    if(root==NULL)
    return 0;
         
    int count1=maxDepth(root->left)+1;
    int count2=maxDepth(root->right)+1;
 
-   return max(count1, count2);
+   return max(count1, count2);         // subtree max height then recursively builds the tree and return whole tree height
 }
 bool isBalanced(TreeNode* root) {     //to check if tree is height balanced or not
    if(root==nullptr)

@@ -60,13 +60,6 @@ vector<vector<int>> levelOrder(struct Node* root) {   //level wise from left to 
             q.push(node->left);
             if(node->right!=NULL)
             q.push(node->right);
-
-            /*
-            N-ary tree
-            for(Node*& child: node->children){         each node will have vector associated containing children 
-                q.push(child);
-            }
-            */
         }
         vec.push_back(v);
     }
