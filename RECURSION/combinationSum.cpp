@@ -10,11 +10,15 @@ public:
             anss.push_back(ans);
             return;
         }
+
+        // include
         if(candidates[idx]<=target){
             ans.push_back(candidates[idx]);
             comb(idx, candidates, target-candidates[idx], ans);
             ans.pop_back();
         }
+
+        // exclude
         comb(idx+1, candidates, target, ans);
     }
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {

@@ -11,7 +11,7 @@ JSON - JavaScript Notation
 >> GREEDY METHODS
 
 1. Fractional knapsack
-
+2. Jump Games
 
 
 >> LINKED LIST
@@ -22,16 +22,18 @@ JSON - JavaScript Notation
 
 >> STACK
 
-Histogram
-Next Greater / Previous smaller
-Celebrity Prob
+1. Histogram
+2. Next Greater / Previous smaller
+3. Celebrity Prob
 
 
 
 >> TREE
 
-height/depth/balanced
-flatten tree
+1. height/depth/balanced
+2. Flatten tree
+3. Morris traversal
+4. Convert BST into LL
 
 
 
