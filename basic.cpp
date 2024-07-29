@@ -141,3 +141,6 @@ max({x, y, z, ...})
 
 // iota to assign successive values
 iota(vec.begin(), vec.end(), 4);         // =>   4, 5, 6, 7, 8... size of vector
+
+// check power of some number in terms of 2
+log2(n)
