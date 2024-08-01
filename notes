@@ -13,6 +13,7 @@ JSON - JavaScript Notation
 
 1. Fractional knapsack
 2. Jump Games
+3. Max meetings in one room
 
 
 >> LINKED LIST
@@ -36,6 +37,11 @@ JSON - JavaScript Notation
 3. Morris traversal
 4. Convert BST into LL
 
+
+
+>> DP
+
+1. Partition questions
 
 
 

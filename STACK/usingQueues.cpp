@@ -1,42 +1,46 @@
 #include<bits/stdc++.h>
 using namespace std;            //implementation of stack using queue
 
-class Stack {
-	queue<int> q;
+class MyStack
+{
+    queue<int> q;
 
 public:
-    Stack() {}
+    MyStack() {}
 
-    int getSize() {
-        return q.size();
+    bool empty()
+    {
+        return q.size() == 0;
     }
-    bool isEmpty() {
-        return q.empty();
-    }
-    void push(int x) {
-        if(isEmpty())
-        q.push(x);
-        else{
-            int n=q.size();
+    void push(int x)
+    {
+        if (empty())
+            q.push(x);
+        else
+        {
+            int n = q.size();
             q.push(x);
 
-            while(n--){
+            while (n--)
+            {
                 q.push(q.front());
                 q.pop();
             }
         }
     }
-    int pop() {
-        if(isEmpty())
-        return -1;
+    int pop()
+    {
+        if (empty())
+            return -1;
 
-        int x=q.front();
+        int x = q.front();
         q.pop();
         return x;
     }
-    int top() {
-        if(isEmpty())
-        return -1;
+    int top()
+    {
+        if (empty())
+            return -1;
 
         return q.front();
     }

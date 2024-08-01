@@ -20,6 +20,13 @@
         "limits": "cpp",
         "exception": "cpp",
         "tuple": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "stack": "cpp",
+        "streambuf": "cpp",
+        "xiosbase": "cpp"
     }
 }
