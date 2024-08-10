@@ -26,10 +26,10 @@ class heap{
         if(size==0)
         return;
 
-        arr[1]=arr[size];           // first swap the last element to the root
-        size--;
+        arr[1]=arr[size];           // first swap the last element to the element to be deleted
+        size--;                     // remove that last node
 
-        int i=1;                    // take root node to correct position
+        int i=1;                    // take that node to correct position
         while(i<size){
             int left=2*i, right=2*i+1;
 

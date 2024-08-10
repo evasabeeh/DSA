@@ -3,8 +3,8 @@ class Solution
 {
 public:
     int kthLargest(vector<int> &arr, int N, int K)
-    {
-        priority_queue<int, vector<int>, greater<int>> pq;
+    {                                                             // if largest is asked, then make min heap
+        priority_queue<int, vector<int>, greater<int>> pq;        // if smallest is asked, then make max heap
         for (int i = 0; i < N; i++)
         {
             int sum = 0;

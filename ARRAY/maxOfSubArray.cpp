@@ -11,9 +11,7 @@ void maxSum(vector<int> nums, int k){          //print max of each subarrays of 
         dq.push_back(i);
     }
 
-    for(int i=k;i<nums.size();i++){
-        cout<<nums[dq.front()]<<" ";                    //front element is the maximum element
-
+    for(int i=k;i<nums.size();i++){                //front element is the maximum element
         while(!dq.empty()&&dq.front()<=i-k){            //to remove indices out of the window
             dq.pop_front();
         }

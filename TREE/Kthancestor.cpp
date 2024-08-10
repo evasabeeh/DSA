@@ -9,7 +9,7 @@ void solve(Node* root, int k, int node){
         return;
     }
 
-    if(!Flag)
+    if(!flag)
     solve(root->left, k, node);
     if(!flag)
     solve(root->right, k, node);

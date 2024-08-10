@@ -57,14 +57,15 @@ upper_bound(v.begin(), v.end(), x);           //iterator to first greater elemen
 lower_bound(v.begin(), v.end(), x);           //iterator to target or first greater element than target
 
 auto it=find(vec.begin(), vec.end(), x);
-  if (it != vec.end())
-  return true;
+if (it != vec.end())
+return true;
 
 //pair
 pair<int, int> p;
 int a=p.first, b=p.second;    //extract first and second element from the pair
 pair<int, int> arr[]={{1, 2}}  //pair array
 cout<<arr[0].first;
+make_pair(2, 3);
 
 next_permutation(vec.begin(), vec.end());      //next permutation of digits
 
