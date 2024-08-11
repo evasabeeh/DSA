@@ -1,4 +1,4 @@
-#inlcude<iostream>
+#inlcude<bits/stdc++.h>
 using namespace std; 
 struct adjNode{                             //adjacency list
     int val;

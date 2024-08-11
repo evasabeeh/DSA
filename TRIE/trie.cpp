@@ -11,7 +11,7 @@ class TrieNode{
         data=c;                             // node value
         isTerminal=false;                   // if the node is the last node
         for(int i=0;i<26;i++)
-        children[i]=nullptr;
+        children[i]=NULL;
     }
 };
 class Trie{
@@ -21,13 +21,15 @@ class Trie{
         root = new TrieNode('\0');          // root node started with null char
     }
     void insertUtil(TrieNode* root, string word){
-        if(word.length() == 0)                // word is inserted
-        root->isTerminal=true;
+        if(word.length() == 0){                // word is inserted
+            root->isTerminal=true;
+            return;
+        }
 
         int idx = word[0] - 'a';
         TrieNode* child;
 
-        if(root->children[idx] != nullptr)      // the char is already there
+        if(root->children[idx] != NULL)      // the char is already there
         child=root->children[idx];
         else{
             child = new TrieNode(word[0]);      // if not there
@@ -46,7 +48,7 @@ class Trie{
         int idx = word[0] - 'a';
         TrieNode* child;
 
-        if(root->children[idx] != nullptr)
+        if(root->children[idx] != NULL)
         child = root->children[idx];
         else
         return false;
@@ -63,7 +65,7 @@ int main(){
     t->insertWord("ant");
     t->insertWord("bed");
     t->insertWord("red");
-    cout<<t->searchWord("ant");
+    cout<<t->searchWord("ant")<<endl;
     cout << t->searchWord("be");
 
     return 0;
