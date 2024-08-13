@@ -9,7 +9,7 @@ bool checkCycle(int node, int parent, vector<bool> &vis, vector<int> adj[]){
             if(checkCycle(x, node, vis, adj))
             return true;
         }
-        else if(x!=parent)
+        else if(x!=parent)               // if not parent but visited then cycle
         return true;
     }
     return false;
@@ -43,29 +43,7 @@ int main(){
     adj[2].push_back(3);
     adj[3].push_back(2);                  
 
-   /*
-   for(int i=0;i<n;i++)                   for directed graph, incoming edges are considered for list
-    adj[v].push_back(u);
-   */
-
     cout<<isCycle(5, adj);
 
     return 0;
 }
-
-/*
-bool checkCycle(int node, vector<bool>& pathVis, vector<bool> &vis, vector<int> courses[]){
-    vis[node]=true;
-    pathVis[node]=true;
-    for(auto x: courses[node]){
-        if(!vis[x]){
-            if(checkCycle(x, pathVis, vis, courses))
-            return true;
-        }
-        else if(pathVis[x])
-        return true;
-    }
-    pathVis[node]=false;
-    return false;
-}
-*/
