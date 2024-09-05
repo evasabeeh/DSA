@@ -145,3 +145,6 @@ iota(vec.begin(), vec.end(), 4);         // =>   4, 5, 6, 7, 8... size of vector
 
 // check power of some number in terms of 2
 log2(n)
+
+// initialise array with value -1
+memset(arr, -1, sizeof(arr));
