@@ -1,13 +1,13 @@
-sizeof(char)                 // 1 byte
+sizeof(char)                  // 1 byte
 
-sizeof(arr)/sizeof(arr[0])   //array size
+sizeof(arr)/sizeof(arr[0])    //array size
 
-int a[5]={4};                // {4, 0, 0, 0, 0}
-sort(arr, arr+2)             //sort array within range
+int a[5]={4};                 // {4, 0, 0, 0, 0}
+sort(arr, arr+2)              //sort array within range
 sort(arr, arr+2, greater<int>())             //descending
 sort(a, a+3, comp)            //sort in desired order
 
-M_PI   // pi=3.14 (use const only)
+M_PI             // pi=3.14 (use const only)
 
 
 //set: sorted and unique
@@ -36,7 +36,7 @@ vector<int> v;
 //rbegin - reverse begin
 
 v.pop_back();         //remove last element
-v.push_back(4);      //or v.emplace_back(3);
+v.push_back(4);       //or v.emplace_back(3);
 v.insert(v.begin()+1, 5)
 auto it=v.begin();
 v.insert(4, it);         //insert element at specified position
@@ -62,7 +62,7 @@ return true;
 
 //pair
 pair<int, int> p;
-int a=p.first, b=p.second;    //extract first and second element from the pair
+int a=p.first, b=p.second;     //extract first and second element from the pair
 pair<int, int> arr[]={{1, 2}}  //pair array
 cout<<arr[0].first;
 make_pair(2, 3);
@@ -88,11 +88,11 @@ li.push_front();
 priority_queue<int, vector<int>, greater<int>> pq;       // min heap
 priority_queue<int> pq;           // max heap
 pq.top();   // pq.front() in pq
- 
-__builtin_popcount(n)        // count set bits in an number  or popcountll()
+
+__builtin_popcount(n)            // count set bits in an number or popcountll()
 
 
-auto a=8;     //auto assigns datatype to var acc to data
+auto a = 8;     //auto assigns datatype to var acc to data
 
 
 
@@ -128,7 +128,7 @@ sort(id.begin(), id.end(), compare);
 
 
 //if vector is a subset of another vector
-bool f=includes(b.begin(), b.end(), a.begin(), a.end());    //if A is a subset of B
+bool f = includes(b.begin(), b.end(), a.begin(), a.end());    //if A is a subset of B
 
 
 //reverse number
