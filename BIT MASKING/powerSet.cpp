@@ -4,6 +4,7 @@ using namespace std;          //generate power set using bitwise operators
                               //counter=000...n  => 000.. => empty set while 0011.. => CD; 101.. => AC
 void powerSet(char* set, int n){
     int powerSetSize=pow(2, n);
+    
     for(int counter=0;counter<powerSetSize;counter++){     //counter binaryRepresentation runs 000 to 111
 
         for(int i=0;i<n;i++){

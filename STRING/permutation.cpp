@@ -16,6 +16,6 @@ int main(){
     string s="ABC";
     string ans="";
     permute(s, ans);
-    
+    cout<<s.substr(0, 0)<<endl;
     return 0;
 }                         

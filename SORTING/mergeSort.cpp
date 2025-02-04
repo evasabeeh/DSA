@@ -20,7 +20,7 @@ void merge(int *arr, int start, int mid, int end){
     }
 
     for(int i:m)
-    arr[start++]=i;
+    arr[start++]=i;               // add from start pointer only
 }
 void divide(int *arr, int start, int end){
     if(start>=end){

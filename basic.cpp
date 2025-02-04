@@ -1,8 +1,10 @@
-sizeof(char)                  // 1 byte
+sizeof(char) // 1 byte
 
-sizeof(arr)/sizeof(arr[0])    //array size
+sizeof(void) // The size of void pointer varies system to system. If the system is 16-bit, size of void pointer is 2 bytes. If the system is 32-bit, size of void pointer is 4 bytes. If the system is 64-bit, size of void pointer is 8 bytes.
 
-int a[5]={4};                 // {4, 0, 0, 0, 0}
+sizeof(arr) / sizeof(arr[0]) // array size
+
+int a[5] = {4};           // {4, 0, 0, 0, 0}
 sort(arr, arr+2)              //sort array within range
 sort(arr, arr+2, greater<int>())             //descending
 sort(a, a+3, comp)            //sort in desired order
@@ -148,3 +150,7 @@ log2(n)
 
 // initialise array with value -1
 memset(arr, -1, sizeof(arr));
+
+Can have only 1 destructor per class = > destructor can not be overloaded as it is only one way to destroy the object created by the constructor
+
+sum of sq num = [n(n + 1)(2n + 1)] / 6
