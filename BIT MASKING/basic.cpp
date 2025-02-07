@@ -35,3 +35,11 @@ while(m!=0){
     m = m >> 1;
 }
 int ans = (~n) & mask;
+
+
+// summation helpful
+/*
+1. XOR = sum without carry
+2. AND = carry
+3. carry << 1 = carry shifted to left
+*/

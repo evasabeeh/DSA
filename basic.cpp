@@ -151,6 +151,11 @@ log2(n)
 // initialise array with value -1
 memset(arr, -1, sizeof(arr));
 
-Can have only 1 destructor per class = > destructor can not be overloaded as it is only one way to destroy the object created by the constructor
+//Can have only 1 destructor per class = > destructor can not be overloaded as it is only one way to destroy the object created by the constructor
 
-sum of sq num = [n(n + 1)(2n + 1)] / 6
+//sum of sq num = [n(n + 1)(2n + 1)] / 6
+
+toupper(c)
+
+// compare function should be static
+static bool compare(int a, int b){}
