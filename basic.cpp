@@ -159,3 +159,14 @@ toupper(c)
 
 // compare function should be static
 static bool compare(int a, int b){}
+
+// 10^8 operations are said to take 1 sec
+// so if n = 10^5 and O(n2) then it become 10^10 which is more than 1 sec, bad algo
+
+// for array of n
+n *(n - 1) / 2 pairs possible
+
+// if long long * long long is giving an error, one of the elements can be made as
+long long ans = static_cast<long long>(n) * n  // or just multiply long long data types not integers
+// It's important to make at least one of the operands long long. If you just multiply two ints, the overflow will happen before the result is assigned to the long long variable.  Using static_cast is a clear way to ensure this.
+

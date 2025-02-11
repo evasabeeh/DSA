@@ -1,3 +1,5 @@
+// Dutch National Flag problem
+
 #include<bits/stdc++.h>
 using namespace std;        //sort array of 0,1,2          //three ptr approach
 int main(){
