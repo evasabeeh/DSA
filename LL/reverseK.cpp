@@ -1,3 +1,33 @@
+class Solution
+{
+public:
+    ListNode *reverseKGroup(ListNode *head, int k)
+    {
+        ListNode *curr = head;
+        int count = 0;
+        while (curr && count < k)
+        {
+            curr = curr->next;
+            count++;
+        }
+
+        if (count == k)
+        {        // reverse first k nodes
+            ListNode *prev = reverseKGroup(curr, k);
+            while (count--)
+            {
+                ListNode *temp = head->next;
+                head->next = prev;
+                prev = head;
+                head = temp;
+            }
+            head = prev;
+        }
+        return head;
+    }
+};
+
+/*  this work only when last <k nodes can be reversed
 Node *kReverse(Node *head, int k)
 {
     // base call
@@ -28,3 +58,5 @@ Node *kReverse(Node *head, int k)
     // step3: return head of reversed list
     return prev;
 }
+
+*/

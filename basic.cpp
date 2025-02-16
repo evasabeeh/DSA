@@ -6,13 +6,14 @@ sizeof(arr) / sizeof(arr[0]) // array size
 
 int a[5] = {4};           // {4, 0, 0, 0, 0}
 sort(arr, arr+2)              //sort array within range
-sort(arr, arr+2, greater<int>())             //descending
+sort(arr, arr+2, greater<int>())             //descending          // merge sort itis o(nlogn)
 sort(a, a+3, comp)            //sort in desired order
 
 M_PI             // pi=3.14 (use const only)
 
 
-//set: sorted and unique
+//set: sorted and unique - in tree form at backend
+// unordered set can't store vectors and pairs as their values can't be hashed
 unordered_set<int> s;
 s.insert(3);
 s.begin();    //iterator to first element
@@ -33,7 +34,7 @@ v.erase(v.find(x))          // to find x and delete x
 v.insert(x)
 
 
-//vector
+//vector has an added advantage over arrays that it can be resized dynamically
 vector<int> v;
 //rbegin - reverse begin
 
@@ -62,7 +63,7 @@ auto it=find(vec.begin(), vec.end(), x);
 if (it != vec.end())
 return true;
 
-//pair
+//pair - in built comparator
 pair<int, int> p;
 int a=p.first, b=p.second;     //extract first and second element from the pair
 pair<int, int> arr[]={{1, 2}}  //pair array
@@ -71,8 +72,8 @@ make_pair(2, 3);
 
 next_permutation(vec.begin(), vec.end());      //next permutation of digits
 
-
-//map
+// map - when you need to find in vector of pairs, then you will traverse and then find while in map you'll just acess it like mp[n]
+// unordered map can't store vectors and pairs as their values can't be hashed
 map<int, int> mp;
 for(auto it=mp.begin(); it!=mp.end();it++)
 cout<<it->first;
@@ -170,3 +171,4 @@ n *(n - 1) / 2 pairs possible
 long long ans = static_cast<long long>(n) * n  // or just multiply long long data types not integers
 // It's important to make at least one of the operands long long. If you just multiply two ints, the overflow will happen before the result is assigned to the long long variable.  Using static_cast is a clear way to ensure this.
 
+// divide by double always for right application of ceil() because when we divide by integer it is automatically converted to floor() int and thus give wrong results with ceil()
