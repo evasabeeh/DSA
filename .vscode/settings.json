@@ -27,6 +27,8 @@
         "memory": "cpp",
         "stack": "cpp",
         "streambuf": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "xlocinfo": "cpp",
+        "xutility": "cpp"
     }
 }
