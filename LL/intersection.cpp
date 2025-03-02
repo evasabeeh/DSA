@@ -11,7 +11,7 @@ public
 
         while (a != b)
         {
-            if (a == null)
+            if (a == null)        // when one list ends, then make the list equal to the same other list, so they will end up on same, intersection node later when moved forward
             {
                 a = headB;
             }
