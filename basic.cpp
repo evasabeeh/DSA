@@ -165,10 +165,11 @@ static bool compare(int a, int b){}
 // so if n = 10^5 and O(n2) then it become 10^10 which is more than 1 sec, bad algo
 
 // for array of n
-n *(n - 1) / 2 pairs possible
+n * (n - 1) / 2       // pairs possible
 
 // if long long * long long is giving an error, one of the elements can be made as
 long long ans = static_cast<long long>(n) * n  // or just multiply long long data types not integers
 // It's important to make at least one of the operands long long. If you just multiply two ints, the overflow will happen before the result is assigned to the long long variable.  Using static_cast is a clear way to ensure this.
 
 // divide by double always for right application of ceil() because when we divide by integer it is automatically converted to floor() int and thus give wrong results with ceil()
+

@@ -11,7 +11,7 @@ void firstAndLastPosition(vector<int> &arr, int n, int k)
         if (arr[mid] == k)
         {
             left = mid;
-            end = mid - 1;
+            end = mid - 1;      // when we found the element, ans we are making that as end, then we are searching only ahead elements, that whether the element exists anywhere before or not
         }
         else if (arr[mid] > k)
             end = mid - 1;
@@ -29,8 +29,8 @@ void firstAndLastPosition(vector<int> &arr, int n, int k)
         if (arr[mid] == k)
         {
             right = mid;
-            start = mid + 1;
-        }
+            start = mid + 1;      // same as we found first, we are doing for last, and we are making the mid as start, so that we are searching only after positions, that whether any more elements exists, that will be our last
+        } 
         else if (arr[mid] > k)
             end = mid - 1;
         else
