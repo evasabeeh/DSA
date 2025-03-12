@@ -3,3 +3,4 @@ Elementary operations
 2. 10^8 operations = 1 second in coding platforms else it depends on diff computers; normally platforms allow 256 mb in coding platforms
 
 3. Average => Best case + Worst case / 2
+
