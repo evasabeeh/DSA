@@ -173,3 +173,4 @@ long long ans = static_cast<long long>(n) * n  // or just multiply long long dat
 
 // divide by double always for right application of ceil() because when we divide by integer it is automatically converted to floor() int and thus give wrong results with ceil()
 
+//Range update questions
